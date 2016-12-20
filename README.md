@@ -1,7 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create Inferno App](https://github.com/infenrojs/create-inferno-app).
 
-# React Fractals
+# Inferno Fractals
 
 An experiment in fractalization and component recursion.
-
-![](/react-tree.gif)
