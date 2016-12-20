@@ -1,23 +1,23 @@
 {
-  "name": "react-fractals",
+  "name": "inferno-fractals",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
     "gh-pages": "^0.12.0",
-    "react-scripts": "0.7.0"
+    "inferno-scripts": "^0.9.0"
   },
   "dependencies": {
     "d3-scale": "^1.0.4",
     "d3-selection": "^1.0.3",
-    "react": "^15.4.0",
-    "react-dom": "^15.4.0"
+    "inferno": "1.0.0-beta36",
+    "inferno-component": "1.0.0-beta36"
   },
-  "homepage": "https://swizec.github.io/react-fractals",
+  "homepage": "https://github.com/trueadm/inferno-fractals",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "inferno-scripts start",
+    "build": "inferno-scripts build",
+    "test": "inferno-scripts test --env=jsdom",
+    "eject": "inferno-scripts eject",
     "deploy": "gh-pages -d build"
   }
 }

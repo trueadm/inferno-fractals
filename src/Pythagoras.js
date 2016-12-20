@@ -1,5 +1,5 @@
 
-import React from 'react';
+import Inferno from 'inferno';
 import { interpolateViridis } from 'd3-scale';
 
 Math.deg = function(radians) {
@@ -54,7 +54,7 @@ const Pythagoras = ({ w,x, y, heightFactor, lean, left, right, lvl, maxlvl }) =>
     }
 
     return (
-        <g transform={`translate(${x} ${y}) ${rotate}`}>
+        <g transform={`translate(${x} ${y}) ${rotate}`} noNormalize hasNonKeyedChildren>
             <rect width={w} height={w}
                   x={0} y={0}
                   style={{fill: interpolateViridis(lvl/maxlvl)}} />
@@ -64,14 +64,16 @@ const Pythagoras = ({ w,x, y, heightFactor, lean, left, right, lvl, maxlvl }) =>
                         lvl={lvl+1} maxlvl={maxlvl}
                         heightFactor={heightFactor}
                         lean={lean}
-                        left />
+                        left
+                        noNormalize />
 
             <Pythagoras w={nextRight}
                         x={w-nextRight} y={-nextRight}
                         lvl={lvl+1} maxlvl={maxlvl}
                         heightFactor={heightFactor}
                         lean={lean}
-                        right />
+                        right
+                        noNormalize />
 
         </g>
     );
