@@ -51,10 +51,12 @@ class App extends Component {
               scaleLean = scaleLinear().domain([0, this.svg.width/2, this.svg.width])
                                        .range([.5, 0, -.5]);
 
+        console.time('fast')
         this.setState({
             heightFactor: scaleFactor(y),
             lean: scaleLean(x)
         });
+        console.timeEnd('fast')
         this.running = false;
     }
 
